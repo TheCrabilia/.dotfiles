@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+dotfiles () {
+    emulate -L zsh
+    pushd ${HOME} &>/dev/null
+    git --git-dir=${HOME}/.dotfiles/ --work-tree=${HOME} "$@"
+    popd &>/dev/null
+}
