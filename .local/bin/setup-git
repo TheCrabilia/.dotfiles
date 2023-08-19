@@ -2,7 +2,7 @@
 
 set -a
 
-config=$(cat git/gitconfig)
+config=$(cat $HOME/.dotfiles/git/gitconfig)
 
 read "name?Username: "
 read "email?Email: "
@@ -17,6 +17,3 @@ else
 fi
 
 envsubst <<<$config |> $HOME/.gitconfig
-[[ ! -f $HOME/.gitignore_global ]] && ln -s $(pwd)/git/gitignore_global $HOME/.gitignore_global
-
-# vim:ft=zsh
