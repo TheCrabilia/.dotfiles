@@ -13,3 +13,8 @@ git clone --recurse-submodules --separate-git-dir=${HOME}/.dotfiles https://gith
 ## Tmux
 
 To install tmux plugins, press `<C-a>I`
+
+## TODOs
+
+- Write install script for new machines
+- Create `source` wrapper to compile file beforehand
