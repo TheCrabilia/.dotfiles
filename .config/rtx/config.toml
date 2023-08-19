@@ -1,0 +1,11 @@
+[settings]
+missing_runtime_behavior = "warn"
+legacy_version_file = true
+always_keep_download = false
+experimental = true
+
+[tools]
+python = "latest"
+go = "latest"
+node = "latest"
+java = "latest"
