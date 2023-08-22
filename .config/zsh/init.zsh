@@ -56,10 +56,12 @@ fi
 unset corp_proxy
 
 ## Load aliases
-if [[ ! -e aliases.zsh.zwc || aliases.zsh.zwc -ot aliases.zsh ]]; then
-    zcompile -Uz aliases.zsh
+local alias_file=${0:h:a}/aliases.zsh
+if [[ ! -e ${alias_file}.zwc || ${alias_file}.zwc -ot ${alias_file} ]]; then
+    zcompile -Uz ${alias_file}
 fi
-source aliases.zsh
+source ${alias_file}
+unset alias_file
 
 ## Plugin settings
 # ZSH-AUTOSUGGEST
